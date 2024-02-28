@@ -86,7 +86,6 @@ public class Server {
                 } else {
                     sendPacket(socket, player.address, player.port,
                             "¿Quieres pedir otra carta? (s/n)".getBytes());
-                    sendPacket(socket, player.address, player.port, "continue".getBytes());
                 }
             }
 
@@ -171,6 +170,5 @@ public class Server {
         DatagramPacket receivedPacket = new DatagramPacket(buffer, buffer.length);
         socket.receive(receivedPacket);
         return receivedPacket;
-        // asdasdasdasdsa
     }
 }
